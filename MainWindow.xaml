@@ -1,0 +1,25 @@
+﻿<Window x:Class="Lab3_EF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab3_EF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="ClientDgr" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Booking_date}" Header="Date"/>
+                
+                <DataGridTextColumn Binding="{Binding Client.Client_sName}" Header="Фамилия"/>
+                <DataGridTextColumn Binding="{Binding Client.Client_fName}" Header="Имя"/>
+                <DataGridTextColumn Binding="{Binding Client.Client_mName}" Header="Отчество"/>
+                <DataGridTextColumn Binding="{Binding Client.Client_phone}" Header="Номер телефона"/>
+
+                <DataGridTextColumn Binding="{Binding Menu.Dish_name}" Header="Блюдо"/>
+                <DataGridTextColumn Binding="{Binding Menu.Dish_price}" Header="Цена"/>
+
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
